@@ -2,9 +2,11 @@
   "name": "rmb-x",
   "version": "0.1.2",
   "description": "人民币大写, 人民币金额大写, RMB, RMB Upper Case, Amount Of Money",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "./index.d.ts",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --require intelli-espower-loader ./test/test.js"
+    "test": "./node_modules/mocha/bin/mocha --require intelli-espower-loader ./test/test.js",
+    "build": "babel ./index.js --out-dir dist"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,8 @@
   },
   "homepage": "https://github.com/michaellyu/rmb-x#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
     "intelli-espower-loader": "^1.0.1",
     "mocha": "^5.2.0",
     "power-assert": "^1.6.0"
